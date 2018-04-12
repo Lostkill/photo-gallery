@@ -1,0 +1,33 @@
+.container{
+    background-color: #f7f7f7;
+    padding: 30px 30px;
+    width: 80%;
+}
+
+.title{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    color: #337ab7;
+    font-family: 'Dosis';
+}
+
+.img-block{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 33px;
+    margin-left: 47px;
+    margin-bottom: 20px;
+}
+
+.exibition{
+    max-width:128px;
+    max-height:128px;
+    width: 128px;
+    height: 128px;
+}
+
+.btn-lg{
+    margin-top: 5px;
+}
