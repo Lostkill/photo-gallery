@@ -16,9 +16,9 @@
 		<div class="container" align="left">
 			<h1 class="title">Cadastro de Imagens</h1>
 				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" name="cadastro" >
-				Foto de exibição:<br />
-				<input type="file" name="foto" class="btn btn-lg btn-primary"/><br/>
-				<input type="submit" name="cadastrar" value="Cadastrar Foto" class="btn btn-lg btn-primary"/>
+					Foto de exibição:<br />
+					<input type="file" name="foto" class="btn btn-lg btn-primary"/><br/>
+					<input type="submit" name="cadastrar" value="Cadastrar Foto" class="btn btn-lg btn-primary"/>
 				</form>
 
 		<br>
@@ -29,7 +29,7 @@
 				$db = @mysql_select_db("estudo1", $conn) or die ("Problemas na conexão");			
 
 				// Seleciona todos os usuários
-				$sql = mysql_query("SELECT * FROM usuarios ORDER BY id");
+				$sql = mysql_query("SELECT * FROM usuarios ORDER BY id DESC");
 					
 				// Exibe as informações de cada usuário
 				while ($usuario = mysql_fetch_object($sql)) {
@@ -51,7 +51,7 @@
 
 	<footer>
 		<div class="container" align="center">
-			<h5> Desenvolvido por Samuel e Pablo </h5>
+			<h5> Desenvolvido por Pablo Santos </h5>
 		</div>
 	</footer>
 
@@ -125,6 +125,7 @@ if (isset($_POST['cadastrar'])) {
 			// Se os dados forem inseridos com sucesso
 			if ($sql){
 				echo "Você foi cadastrado com sucesso.";
+				header('location: ' . dirname( $_SERVER['PHP_SELF'] ) . '/index.php');
 			}
 		}
 	
